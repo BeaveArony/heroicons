@@ -3,7 +3,7 @@
   "author": {
     "name": "Michael Gustmann"
   },
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "This Angular package follows the original HeroIcons project for generating icons and is compatible with Tailwind CSS.",
   "keywords": [
     "tailwind",
