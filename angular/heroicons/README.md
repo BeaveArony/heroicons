@@ -1,25 +1,22 @@
-# NG Heroicon
+# Angular Heroicons
 
 A set of free MIT-licensed high-quality SVG icons for you to use in your web projects.
 
-This project is a fork of https://github.com/tailwindlabs/heroicons which enables the use for Angular projects,
-providing a component to display the heroicon.
+This project is a fork of https://github.com/renatoaraujoc/heroicons, which is a fork of https://github.com/tailwindlabs/heroicons.
+It fixes the issue that solid SVGs don't respect the fill and stroke attributes properly.
 
-This project uses some code ideas from https://github.com/ashley-hunter/ng-heroicons, fixing some stuff like enabling
-passing class names for icon customization. It also fully works with TailwindCSS classes!
-
-Preview and search at icons at https://www.heroicons.com
+Preview and search icons at https://www.heroicons.com
 
 ## Installing Library
 
 ```
-npm i ng-heroicon
+npm i @mgustmann/heroicons
 ```
 
 or
 
 ```
-yarn add ng-heroicon
+yarn add @mgustmann/heroicons
 ```
 
 ## First steps
@@ -39,21 +36,23 @@ For best experience I recommend `{ defaultHostDisplay: 'inlineBlock', attachDefa
 On root module:
 
 ```typescript
-import {menu, HeroIconModule} from 'ng-heroicon';
+import { menu, HeroIconModule } from '@mgustmann/heroicons'
 
 @NgModule({
-    declarations: [],
-    imports: [
-        HeroIconModule.forRoot({
-            menu
-        }, {
-            defaultHostDisplay: 'inlineBlock', // default 'none'
-            attachDefaultDimensionsIfNoneFound: true // default 'false'
-        })
-    ],
+  declarations: [],
+  imports: [
+    HeroIconModule.forRoot(
+      {
+        menu,
+      },
+      {
+        defaultHostDisplay: 'inlineBlock', // default 'none'
+        attachDefaultDimensionsIfNoneFound: true, // default 'false'
+      }
+    ),
+  ],
 })
-export class AppModule {
-}
+export class AppModule {}
 ```
 
 ## On child modules
@@ -61,25 +60,27 @@ export class AppModule {
 Call the module with `withIcons` function passing the wanted icons and optionally overriding the `options`, e.g.:
 
 ```typescript
-import {annotation, menu, HeroIconModule} from 'ng-heroicon';
+import { annotation, menu, HeroIconModule } from '@mgustmann/heroicons'
 
 @NgModule({
-    declarations: [],
-    imports: [
-        HeroIconModule.withIcons({
-            annotation,
-            menu
-        }, {
-            /**
-             * Child level options.
-             * Non passed options will use the rootModule options.
-             */
-            defaultHostDisplay: 'block',
-        })
-    ],
+  declarations: [],
+  imports: [
+    HeroIconModule.withIcons(
+      {
+        annotation,
+        menu,
+      },
+      {
+        /**
+         * Child level options.
+         * Non passed options will use the rootModule options.
+         */
+        defaultHostDisplay: 'block',
+      }
+    ),
+  ],
 })
-export class AppModule {
-}
+export class AppModule {}
 ```
 
 ## On views
@@ -87,8 +88,11 @@ export class AppModule {
 Use the component like this:
 
 ```html
-
 <hero-icon name="annotation" hostDisplay="inlineBlock" type="outline" class="w-6 h-6"></hero-icon>
-<hero-icon name="annotation" type="solid" class="w-4 h-4 text-gray-600 hover:text-gray-500"></hero-icon>
+<hero-icon
+  name="annotation"
+  type="solid"
+  class="w-4 h-4 text-gray-600 hover:text-gray-500"
+></hero-icon>
 <hero-icon [name]="'menu'" [type]="'solid'" [class]="'w-4 h-4 text-red-900'"></hero-icon>
 ```
