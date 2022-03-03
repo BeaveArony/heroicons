@@ -1,5 +1,4 @@
 :host {
-
   &.hi-d-block {
     display: block;
   }
@@ -17,11 +16,4 @@
     width: 20px;
     height: 20px;
   }
-
-  ::ng-deep {
-    path {
-      stroke: currentColor;
-    }
-  }
-
 }
