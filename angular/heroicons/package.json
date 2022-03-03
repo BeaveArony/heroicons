@@ -1,25 +1,27 @@
 {
-  "name": "ng-heroicon",
-  "author": "Renato Carneiro",
-  "version": "2.0.0",
+  "name": "@mgustmann/heroicons",
+  "author": {
+    "name": "Michael Gustmann"
+  },
+  "version": "2.1.1",
   "description": "This Angular package follows the original HeroIcons project for generating icons and is compatible with Tailwind CSS.",
   "keywords": [
     "tailwind",
-    "heroicon",
+    "heroicons",
     "angular",
     "ng",
     "icons"
   ],
-  "homepage": "https://github.com/renatoaraujoc/heroicons/tree/master/angular/heroicons#readme",
+  "homepage": "https://github.com/BeaveArony/heroicons/tree/master/angular/heroicons#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/renatoaraujoc/heroicons.git"
+    "url": "https://github.com/BeaveArony/heroicons.git"
   },
   "peerDependencies": {
     "@angular/common": "^13.2.1",
     "@angular/core": "^13.2.1"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.3.1"
   }
 }
