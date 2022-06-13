@@ -72,7 +72,7 @@ export class IconComponent implements AfterViewInit, OnDestroy {
     .defaultHostDisplay as HeroIconDefaultHostDisplay
 
   _oldClasses = []
-  _classes = null
+  _classes = ''
 
   @Input() set class(value: string) {
     this._classes = value
